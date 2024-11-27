@@ -19,8 +19,8 @@ namespace Core.Data.EfCore.Models.WorkObjects
 		public List<Defect> Defects { get; set; }
 		public List<Expense> Expenses { get; set; }
 
-		[NotMapped]
-		public IEnumerable<EntryEf> Entries => Defects.Cast<EntryEf>().Concat(Expenses);
+		//[NotMapped]
+		//public IEnumerable<EntryEf> Entries => Defects.Cast<EntryEf>().Concat(Expenses);
 		public static WorkStepConfigurations Configuration => new WorkStepConfigurations();
 
 		public class WorkStepConfigurations : ClientModifiablePersistedEntityConfigurations<WorkStep>
